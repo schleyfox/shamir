@@ -114,3 +114,10 @@ q9OVJY7oMCevvdu9zFA=
 d+1p9BnbqxxveYQHgS0=
 ```
 
+```
+# parts = 3, threshold = 2
+# bin/shamir combine --parts=2
+LEWUi4Iu6p7aSeH9D/USIbtL6G0=
+PDmxSJbrPkD8hUEXt1aVL19x9dQ=
+XwcznUeIc+hsVpNU+9HkBjWzlKs=
+```
