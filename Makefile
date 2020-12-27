@@ -1,15 +1,16 @@
 GOFILES ?= $(shell find . -type f -name '*.go')
+GO=go
 
 .PHONY: all
 all: build test lint
 
 .PHONY: build
 build:
-	go build -o ./bin/shamir
+	$(GO) build -o ./bin/shamir
 
 .PHONY: test
 test:
-	go test -cover ./...
+	$(GO) test -cover ./...
 
 .PHONY: lint
 lint: golangci
@@ -29,4 +30,4 @@ golangci:
 
 .PHONY: goimports
 goimports:
-	GO111MODULE=off go get -u golang.org/x/tools/cmd/goimports
+	GO111MODULE=off $(GO) get -u golang.org/x/tools/cmd/goimports

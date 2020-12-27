@@ -40,13 +40,35 @@ _TODO: Add Docker instructions_
    file](https://github.com/schleyfox/shamir/archive/main.zip) and unzip it
    (probably by double-clicking on it). Make note of the file path (on Mac this
    should be `~/Downloads/shamir`)
-2. Open a Terminal.app window (Mac) or Command Prompt (Windows) (I assume Linux
+3. Open a Terminal.app window (Mac) or Command Prompt (Windows) (I assume Linux
    users already have their preferred term open and are using it to try to fix
    their Wi-Fi or printer)
-3. In the terminal, change the directory to the path you unzipped this code to.
+4. In the terminal, change the directory to the path you unzipped this code to.
    For example, `cd ~/Downloads/shamir`
-4. Build the project, with `go build -o ./bin/shamir`. Keep the terminal open
+5. Build the project with `go build -o ./bin/shamir`. Keep the terminal open
    for the next section.
+
+### Docker Instructions (optional)
+
+Optionally, instead of building directly on your machine, you can use Docker
+containers. This is probably not meaningfully easier, but it may be a bit more
+repeatable. **If the previous section worked, there is no need to do this**.
+
+1. [Install Docker Desktop](https://www.docker.com/products/docker-desktop).
+   Download and follow the installer instructions.
+2. Run Docker. Docker must be running in the background for this to work.
+3. Download [this repo as a Zip
+   file](https://github.com/schleyfox/shamir/archive/main.zip) and unzip it
+   (probably by double-clicking on it). Make note of the file path (on Mac this
+   should be `~/Downloads/shamir`)
+4. Open a Terminal.app window (Mac) or Command Prompt (Windows)
+5. In the terminal, change the directory to the path you unzipped this code to.
+   For example, `cd ~/Downloads/shamir`
+6. Build the project with `docker build --file=Dockerfile .
+   --tag=schleyfox-shamir:local`.
+7. Run commands with the prefix `docker run -it --rm schleyfox-shamir:local`
+   like `docker run -it --rm schleyfox-shamir:local bin/shamir combine
+   --parts=2`
 
 ## Usage
 
