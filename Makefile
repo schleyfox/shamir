@@ -1,6 +1,8 @@
 GOFILES ?= $(shell find . -type f -name '*.go')
 GO=go
 
+export GO111MODULE=off
+
 .PHONY: all
 all: build test lint
 
@@ -26,7 +28,7 @@ clean:
 
 .PHONY: golangci
 golangci:
-	curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s v1.33.0
+	curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s v1.39.0
 
 .PHONY: goimports
 goimports:

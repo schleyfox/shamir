@@ -30,8 +30,6 @@ collusion).
 This requires setting up some developer tools to run the program, this might
 get a little frustrating (get one of my nerd friends to do it).
 
-_TODO: Add Docker instructions_
-
 1. [Install Go](https://golang.org/doc/install). Follow the instructions there
    for your operating system. (Go is the programming language this tool is
    written in. Installing Go will allow you to build and run programs written
@@ -45,7 +43,7 @@ _TODO: Add Docker instructions_
    their Wi-Fi or printer)
 4. In the terminal, change the directory to the path you unzipped this code to.
    For example, `cd ~/Downloads/shamir`
-5. Build the project with `go build -o ./bin/shamir`. Keep the terminal open
+5. Build the project with `GO111MODULE=off go build -o ./bin/shamir`. Keep the terminal open
    for the next section.
 
 ### Docker Instructions (optional)
